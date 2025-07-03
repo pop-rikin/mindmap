@@ -8,15 +8,15 @@ import * as THREE from "three"
 
 // Configuration from your adjustments
 const CONFIG = {
-  "centralNodes": 8,
-  "middleNodes": 20,
-  "outerNodes": 40,
-  "connectionDistance": 4,
-  "connectionProbability": 0.5,
-  "nodeSize": 0.16,
+  "centralNodes": 16,
+  "middleNodes": 22,
+  "outerNodes": 83,
+  "connectionDistance": 4.3,
+  "connectionProbability": 0.35,
+  "nodeSize": 0.08,
   "lineOpacity": 0.3,
-  "bloomIntensity": 0.65,
-  "rotationSpeed": 0.001
+  "bloomIntensity": 0,
+  "rotationSpeed": 0.005
 }
 const SEED = 264.0517968528827
 
