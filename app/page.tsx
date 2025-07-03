@@ -8,17 +8,17 @@ import * as THREE from "three"
 
 // Configuration from your adjustments
 const CONFIG = {
-  "centralNodes": 16,
-  "middleNodes": 32,
-  "outerNodes": 80,
+  "centralNodes": 8,
+  "middleNodes": 20,
+  "outerNodes": 40,
   "connectionDistance": 4,
   "connectionProbability": 0.5,
-  "nodeSize": 0.07,
-  "lineOpacity": 0.15,
-  "bloomIntensity": 0,
-  "rotationSpeed": 0.0048
+  "nodeSize": 0.16,
+  "lineOpacity": 0.3,
+  "bloomIntensity": 0.65,
+  "rotationSpeed": 0.001
 }
-const SEED = 242.15645996147128
+const SEED = 264.0517968528827
 
 interface Node {
   position: [number, number, number]
@@ -165,14 +165,14 @@ export default function MindMap3D() {
     <div style={{ 
       width: "100vw", 
       height: "100vh", 
-      backgroundColor: "black",
+      backgroundColor: "transparent",
       margin: 0,
       padding: 0,
       overflow: "hidden"
     }}>
       <Canvas 
         camera={{ position: [0, 0, 10], fov: 55 }} 
-        gl={{ antialias: true, alpha: true }}
+        gl={{ antialias: true, alpha: true, premultipliedAlpha: false }}
         style={{ width: "100%", height: "100%" }}
       >
         <ambientLight intensity={0.4} />
